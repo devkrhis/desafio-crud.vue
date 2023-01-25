@@ -6,7 +6,7 @@
                 <td> Nome </td>
                 <td> Idade </td>
                 <td> Cep </td>
-                <td> Idade </td>
+                <td> Cidade </td>
                 <td> Estado </td>
                 <td> Editar Item</td>
                 <td> Deletar Item</td>
