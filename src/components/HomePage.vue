@@ -24,6 +24,7 @@
             </tr>
             <hr>
             <button type="button" @click="addNewItem"> Add New Item</button>
+            <button type="button" @click="DoubleAge"> Multiplier Age</button>
         </table>
 
     </div>
@@ -85,6 +86,16 @@ export default {
             }
             this.myListArray.push(newItem)
         }, 
+        DoubleAge(){
+            // essa funcao vai duplicar todas as minhas idades por 2
+            console.log("Estou multiplicando todas as idades por * 2")
+            
+            const doubleNumber = this.myListArray.map((numbersDouble, index) => {
+                console.log(numbersDouble.idade *= 2)
+                return numbersDouble.idade *= 2
+            })
+            this.myListArray.idade = doubleNumber
+        },
         editObject(event){
             
             console.log("Passei pelo evento do click:", event)
@@ -128,8 +139,15 @@ export default {
 
 }
 
+#bordMagic td button:hover{
+    background-color: red;
+    
+
+}
+
 #bordMagic td {
     border: 1px solid black;
+    background-color: aqua;
 
 
 }
