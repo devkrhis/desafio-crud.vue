@@ -187,7 +187,7 @@ hr {
 }
 
 #foraDoEscopo button:hover {
-    border: 2px solid rgb(255, 0, 0);
+    border: 2px solid rgb(0, 0, 0);
     background-color: red;
 
 }
