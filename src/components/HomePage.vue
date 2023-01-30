@@ -1,7 +1,10 @@
 <template>
     <div id="homePage">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
         <table id="bordMagic">
-            <tr>
+            <tr id="NomenclaturaEditaveis"> 
                 <td> ID </td>
                 <td> Nome </td>
                 <td> Idade </td>
@@ -12,7 +15,7 @@
                 <td> Deletar Item</td>
             </tr>
             
-            <tr v-for="items in myListArray" :key="items.key">
+            <tr id="itemsEditaveis" v-for="items in myListArray" :key="items.key">
                 <td> {{ items.id }}</td>
                 <td> {{ items.nome }}</td>
                 <td> {{ items.idade }}</td>
@@ -23,8 +26,10 @@
                 <td> <button type="button" @click="deletAll(items.id)"> Delet Object</button> </td>
             </tr>
             <hr>
+            <div id="foraDoEscopo">
             <button type="button" @click="addNewItem"> Add New Item</button>
             <button type="button" @click="DoubleAge"> Multiplier Age</button>
+            </div>
         </table>
 
     </div>
@@ -135,25 +140,56 @@ export default {
 <style scoped>
 
 #bordMagic{
-    border: 1px solid black;
+    border: 3px solid black;
+    padding: 0px 0px 0px 0px;
+    font-family: 'Kanit', sans-serif;
 
 }
 
+#NomenclaturaEditaveis{
+    background-color: rgba(0, 0, 0, 0.63);
+    color: white;
+}
+
+#itemsEditaveis {
+    background-color: rgba(0, 0, 0, 0.863);
+    color: white;
+}
+
+#bordMagic td button {
+    background-color: rgba(255, 255, 255, 0.397);
+    border: 2px solid white;
+    padding: 10px;
+    color: white;
+}
+
 #bordMagic td button:hover{
+    border: 2px solid rgb(255, 0, 0);
     background-color: red;
-    
 
 }
 
 #bordMagic td {
-    border: 1px solid black;
-    background-color: aqua;
-
-
+    border: 0px solid black;
+    padding: 5px 40px 30px 5px;
 }
 
-#bordMagic tr {
+hr {
     border: 1px solid black;
+}
+
+#foraDoEscopo button {
+    background-color: rgba(0, 0, 0, 0.205);
+    border: 2px solid rgb(0, 0, 0);
+    padding: 20px;
+    color: rgb(0, 0, 0);
+    margin: 1px 3px 1px 3px
+}
+
+#foraDoEscopo button:hover {
+    border: 2px solid rgb(255, 0, 0);
+    background-color: red;
+
 }
 
 </style>
